@@ -1,6 +1,6 @@
 name: First Workflow
 on: [push]
-
+ACTIONS_RUNNER_HOOK_JOB_STARTED=make_workspace_script.sh
 jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
@@ -21,5 +21,6 @@ jobs:
     steps:
       - name: Echo a String
         run: Write-Output "Windows String"
-      - name: Error Step
-        run: doesnotexists
+      #- name: Error Step
+      #  run: doesnotexists
+ACTIONS_RUNNER_HOOK_JOB_COMPLETED=cleanup_script.sh
